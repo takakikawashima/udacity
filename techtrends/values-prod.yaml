@@ -1,0 +1,20 @@
+namespace: prod
+
+service:
+  port: 7111
+
+image:
+  repository: takakikawashima/techtrends
+  tag: latest
+  pullPolicy: Always
+
+replicaCount: 5
+
+resources:
+  requests:
+    memory: 128Mi
+    cpu: 350m
+  limits:
+    memory: 256Mi
+    cpu: 500m
+
