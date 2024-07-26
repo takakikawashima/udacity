@@ -1,0 +1,20 @@
+
+docker build -t techtrends .
+
+docker run -d -p 7111:3111 techtrends
+
+docker logs $(docker ps -q --filter ancestor=techtrends)
+
+(venv) kawashima@yoshitsune:~/udacity/nd064_course_1/project/techtrends$ docker logs $(docker ps -q --filter ancestor=techtrends)
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2024-07-26 02:47:04,758 WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-07-26 02:47:04,758 INFO:  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2024-07-26 02:47:13,532 INFO: 10.87.131.17 - - [26/Jul/2024 02:47:13] "GET /healthz HTTP/1.1" 200 -
+2024-07-26 02:49:28,495 INFO: 10.87.131.17 - - [26/Jul/2024 02:49:28] "GET / HTTP/1.1" 200 -
+2024-07-26 02:49:28,522 INFO: 10.87.131.17 - - [26/Jul/2024 02:49:28] "GET /static/css/main.css HTTP/1.1" 200 -
+2024-07-26 02:49:28,574 INFO: 10.87.131.17 - - [26/Jul/2024 02:49:28] "GET /favicon.ico HTTP/1.1" 404 -
