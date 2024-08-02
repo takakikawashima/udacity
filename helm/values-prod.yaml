@@ -4,6 +4,8 @@ service:
   port: 7111
 
 image:
+  repository: takakikawashima/techtrends
+  tag: latest
   pullPolicy: Always
 
 replicaCount: 5

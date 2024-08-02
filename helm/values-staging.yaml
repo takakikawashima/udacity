@@ -1,9 +1,14 @@
 namespace: staging
 
-replicaCount: 3
-
 service:
   port: 5111
+
+image:
+  repository: takakikawashima/techtrends
+  tag: latest
+  pullPolicy: Always
+
+replicaCount: 3
 
 resources:
   requests:
