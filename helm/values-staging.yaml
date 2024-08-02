@@ -1,5 +1,4 @@
-namespace:
-  name: staging
+namespace: staging
 
 replicaCount: 3
 
