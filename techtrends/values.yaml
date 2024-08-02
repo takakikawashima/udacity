@@ -30,4 +30,3 @@ livenessProbe:
 readinessProbe:
   path: /healthz
   port: 3111
-
